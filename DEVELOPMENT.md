@@ -36,6 +36,9 @@ For the fastest setup, use the Docker preset:
 
 ```bash
 # 1. Clone the repository
+# For the main repository:
+# git clone https://github.com/PretendoNetwork/juxtaposition.git
+# Or for this fork:
 git clone https://github.com/Woody1474747/juxtaposition.git
 cd juxtaposition
 
@@ -68,6 +71,10 @@ The services will be available at:
 ### Step 1: Clone the Repository
 
 ```bash
+# Clone the repository
+# For the main PretendoNetwork repository:
+# git clone https://github.com/PretendoNetwork/juxtaposition.git
+# Or for this fork:
 git clone https://github.com/Woody1474747/juxtaposition.git
 cd juxtaposition
 ```
@@ -481,8 +488,8 @@ docker compose up -d
 
 ### Getting Help
 
-- **Issues**: Report bugs or request features on [GitHub Issues](https://github.com/Woody1474747/juxtaposition/issues)
-- **Discussions**: Ask questions on [GitHub Discussions](https://github.com/Woody1474747/juxtaposition/discussions)
+- **Issues**: Report bugs or request features on [GitHub Issues](https://github.com/PretendoNetwork/juxtaposition/issues) (main repository)
+- **Discussions**: Ask questions on [GitHub Discussions](https://github.com/PretendoNetwork/juxtaposition/discussions)
 - **Discord**: Join the Pretendo Network Discord server for community support
 
 ## Contributing
