@@ -13,37 +13,38 @@ This means we both want to bring all features originally found in Miiverse into 
 - The web platforms on the 3DS and Wii U are old, thus we need to use old web methodologies like AJAX. 
 - The XML API of the Miiverse platform cannot be modified or extended, it needs to stay exactly as the consoles expect it.
 
-# Running locally for development
+# Development Setup
+
+📚 **For detailed development environment setup instructions, see [DEVELOPMENT.md](./DEVELOPMENT.md)**
+
+## Quick Start
 
 Prerequisites:
-- Clone the repository
-- Have a functional running [account server](https://github.com/PretendoNetwork/account) and [friends server](https://github.com/PretendoNetwork/friends)
-- Have NodeJS 20 or higher installed
-- Optional: have docker installed (highly recommended)
+- Node.js 20 or higher
+- Docker (highly recommended)
 
-After the prerequisites you need to run the following inside `.docker`:
-```sh
-docker compose up -d
-```
-If you are not using docker for development, please set up the services listed in `.docker/docker-compose.yml` manually.
-
-Next up, you need to run the two services in `/apps`:
 ```bash
-cd apps/miiverse-api
-npm i
-npm run dev
+# 1. Start Docker services
+cd .docker && docker compose up -d && cd ..
+
+# 2. Run miiverse-api
+cd apps/miiverse-api && npm install
+PN_MIIVERSE_API_USE_PRESETS=docker npm run dev
 ```
 
-And in another terminal:
+In another terminal:
 ```bash
-cd apps/juxtaposition-ui
-npm i
-npm run dev
+# 3. Run juxtaposition-ui
+cd apps/juxtaposition-ui && npm install
+PN_JUXTAPOSITION_UI_USE_PRESETS=docker npm run dev
 ```
 
-You have to also make an `.env` file to configure your environment. Inspire it from the schema in `src/config.ts` in each service.
-
-You can use `PN_JUXTAPOSITION_UI_USE_PRESETS=docker` and `PN_MIIVERSE_API_USE_PRESETS=docker` to automatically set up everything that's in the docker compose file.
+The [DEVELOPMENT.md](./DEVELOPMENT.md) guide includes:
+- Complete prerequisites and setup steps
+- Configuration options and environment variables
+- Database initialization
+- Testing with consoles/emulators
+- Troubleshooting common issues
 
 # Translation
 
